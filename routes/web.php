@@ -45,8 +45,12 @@ Route::get('/', function () {
 /*    $post =\App\Post::find(4);
     $post->delete();
 */
-    \App\Post::destroy(3,5,7);
+//    \App\Post::destroy(3,5,7);
 
+    $allPosts =\App\Post::all();
+    dd($allPosts);
+    $featuredPosts =\App\Post::where('is_feature',1)->get();
+    dd($featuredPosts);
 
     return view('welcome');
 });
