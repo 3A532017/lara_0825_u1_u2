@@ -37,10 +37,13 @@ Route::get('/', function () {
         'content'=>'updated content',
     ]);
 */
-    $post = \App\Post::find(3);
+/*    $post = \App\Post::find(3);
     $post-> title='saved title';
     $post->content='saved content';
     $post->save();
+*/
+    $post =\App\Post::find(4);
+    $post->delete();
 
     return view('welcome');
 });
