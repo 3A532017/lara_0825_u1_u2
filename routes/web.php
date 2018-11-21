@@ -31,11 +31,13 @@ Route::get('/', function () {
    $posts =\App\Post::where('id','<','10')->orderBy('id','DESC')->get();
    dd($posts);
 */
-    $post =\App\Post::find(2);
+  /*$post =\App\Post::find(2);
     $post->update([
         'title'=>'updated title',
-        'content'=>'update content',
+        'content'=>'updated content',
     ]);
+*/
+
 
 
     return view('welcome');
