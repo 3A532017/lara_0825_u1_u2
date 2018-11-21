@@ -42,8 +42,11 @@ Route::get('/', function () {
     $post->content='saved content';
     $post->save();
 */
-    $post =\App\Post::find(4);
+/*    $post =\App\Post::find(4);
     $post->delete();
+*/
+    \App\Post::destroy(2);
+
 
     return view('welcome');
 });
