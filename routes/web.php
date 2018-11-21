@@ -19,7 +19,7 @@ Route::get('/', function () {
     ]);
     */
 
-   $post = new \App\Post();
+  /* $post = new \App\Post();
    $post->title = 'test title';
    $post->content ='test content';
    $post->save();
@@ -27,13 +27,16 @@ Route::get('/', function () {
    $posts =\App\Post::all();
    dd($posts);
    $post =\App\Post::find(1);
-   $post->update([
-       'title'=>'updated title',
-       'content'=>'update content',
-   ]);
    dd($post);
    $posts =\App\Post::where('id','<','10')->orderBy('id','DESC')->get();
    dd($posts);
+*/
+    $post =\App\Post::find(2);
+    $post->update([
+        'title'=>'updated title',
+        'content'=>'update content',
+    ]);
+
 
     return view('welcome');
 });
