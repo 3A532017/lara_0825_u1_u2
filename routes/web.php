@@ -10,11 +10,12 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-\App\Post::create([
-    'title'=>'test title',
-    'content'=>'test content',
-]);
+
 
 Route::get('/', function () {
+    \App\Post::create([
+        'title'=>'test title',
+        'content'=>'test content',
+    ]);
     return view('welcome');
 });
