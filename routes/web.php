@@ -52,10 +52,19 @@ Route::get('/', function () {
     $featuredPosts =\App\Post::where('is_feature',1)->get();
     dd($featuredPosts);
 */
-    $fourthPost =\App\Post::find(6);
+/*    $fourthPost =\App\Post::find(6);
     dd($fourthPost);
     $lastPost =\App\Post::orderBy('id','DESC')->first();
     dd($lastPost);
+*/
+    $post = \App\Post::find(1);
+    foreach ($post->comments as $comment) {
+        echo $comment->content.'<br>';
+
+    }
+
+
+
 
     return view('welcome');
 });
